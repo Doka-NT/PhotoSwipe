@@ -101,6 +101,15 @@
 	display: none;
 }
 
+.pswp__button--download {
+  background-position: -87px -37px;
+  transform: rotateZ(90deg);
+}
+
+.pswp__button--rotate {
+  background-position: -177px 0;
+}
+
 .pswp--supports-fs .pswp__button--fs {
 	display: block;
 }
@@ -575,7 +584,9 @@ a.pswp__share--download {
 	}
 }
 
-
+.pswp__img {
+  transition: 0.3s ease-in-out;
+}
 
 
 

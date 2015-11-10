@@ -35,8 +35,7 @@
           transition: opacity 0.2s;
   -webkit-box-shadow: none;
           box-shadow: none; }
-  .pswp__button:focus,
-  .pswp__button:hover {
+  .pswp__button:focus, .pswp__button:hover {
     opacity: 1; }
   .pswp__button:active {
     outline: none;
@@ -75,6 +74,14 @@
 
 .pswp__button--fs {
   display: none; }
+
+.pswp__button--download {
+  background-position: -87px -37px;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg); }
+
+.pswp__button--rotate {
+  background-position: -177px 0; }
 
 .pswp--supports-fs .pswp__button--fs {
   display: block; }
@@ -481,3 +488,7 @@ a.pswp__share--download:hover {
 
 .pswp--minimal--dark .pswp__top-bar {
   background: none; }
+
+.pswp__img {
+  -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out; }
