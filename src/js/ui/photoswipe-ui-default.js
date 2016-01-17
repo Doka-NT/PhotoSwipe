@@ -412,18 +412,28 @@ var PhotoSwipeUI_Default =
 		},
 		_rotateAngle = 0,
 		_setUpRotateImg = function(){
-			document.getElementsByClassName('pswp__button--rotate')[0].addEventListener('click',function(e){
-				e.preventDefault();
-				var el = pswp.currItem.container.lastChild;
-					_rotateAngle+= 90;
-                    var v = 'rotateZ(' + _rotateAngle+ 'deg)';
-                    el.style['-webkit-transform'] = v;
-                    el.style['-moz-transform'] = v;
-                    el.style['-ms-transform'] = v;
-                    el.style['-o-transform'] = v;
-                    el.style['transform'] = v;
+			var els = document.getElementsByClassName('pswp__button--rotate');
+			for (var i in els) {
+				if (els.hasOwnProperty(i)) {
+					els[i].addEventListener('click', function (e) {
+						e.preventDefault();
+						var el = pswp.currItem.container.lastChild;
+						var delta = 90;
+						if (this.getAttribute('data-direction') != 'prev') {
+							_rotateAngle -= delta;
+						} else {
+							_rotateAngle += delta;
+						}
+						var v = 'rotateZ(' + _rotateAngle + 'deg)';
+						el.style['-webkit-transform'] = v;
+						el.style['-moz-transform'] = v;
+						el.style['-ms-transform'] = v;
+						el.style['-o-transform'] = v;
+						el.style['transform'] = v;
 
-			});
+					});
+				}
+			}
 		};
 
 

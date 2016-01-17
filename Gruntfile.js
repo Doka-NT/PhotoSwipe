@@ -275,6 +275,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-aws-s3');
   grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-jekyll');
 
   // Default task.
   grunt.registerTask('default', ['sass', 'autoprefixer', 'pswpbuild','uglify', 'copy', 'jekyll:dev']);
